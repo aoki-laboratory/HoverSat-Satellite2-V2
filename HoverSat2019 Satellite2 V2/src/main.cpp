@@ -118,7 +118,7 @@ float hx711_data;
 
 // DuctedFan
 static const int DuctedFanPin = 15;
-unsigned char hover_val = 70;
+unsigned char hover_val = 65;
 Servo DuctedFan;
 
 unsigned char patternNo = 0;
