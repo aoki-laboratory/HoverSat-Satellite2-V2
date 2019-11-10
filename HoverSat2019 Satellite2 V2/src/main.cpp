@@ -32,14 +32,28 @@
 #define OUT_VOL     0.0007f
 #define LOAD        500.0f
 
-#define NOOFPATTERNS  3
+#define NOOFPATTERNS  17
 
 int parameters[NOOFPATTERNS][5] =
 {
 // Accel, Velocity, Decel, TIme
-  {1000, 100, 100, 100, 10000 },
-  {1000, 200, 100, 400, 10000 },
-  {1000, 400, 100, 800, 10000 }
+{ 1600, 200, 200, 200, 14000 },
+{ 1600, 100, 200, 200, 14500 },
+{ 1600, 400, 200, 200, 13750 },
+{ 1600, 600, 200, 200, 13667 },
+{ 1600, 800, 200, 200, 13625 },
+{ 1600, 1000, 200, 200, 13600 },
+{ 1600, 200, 200, 100, 14500 },
+{ 1600, 200, 200, 400, 13750 },
+{ 1600, 200, 200, 600, 13667 },
+{ 1600, 200, 200, 800, 13625 },
+{ 1600, 200, 200, 1000, 13600 },
+{ 1600, 200, 200, 5000, 13500 },
+{ 1600, 200, 200, 200, 14000 },
+{ 1600, 5000, 200, 5000, 13020 },
+{ 1600, 25, 200, 25, 21000 },
+{ 1600, 200, 200, 200, 14000 },
+{ 1600, 200, 200, 200, 14000 }
 };
 
 
@@ -67,10 +81,10 @@ int bts_index = 0;
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "Buffalo-G-0CBA";
-char pass[] = "hh4aexcxesasx";
-//char ssid[] = "X1Extreme-Hotspot";
-//char pass[] = "5]6C458w";
+//char ssid[] = "Buffalo-G-0CBA";
+//char pass[] = "hh4aexcxesasx";
+char ssid[] = "X1Extreme-Hotspot";
+char pass[] = "5]6C458w";
 //char ssid[] = "Macaw";
 //char pass[] = "1234567890";
 
@@ -472,7 +486,7 @@ void Timer_Interrupt( void ){
         M5.Lcd.setCursor(15, 120);
         M5.Lcd.print("No.");
         M5.Lcd.setTextSize(5);
-        M5.Lcd.setCursor(28, 160);
+        M5.Lcd.setCursor(10, 160);
         M5.Lcd.printf("%2d", patternNo+1);
 
         M5.Lcd.setTextSize(2);
@@ -499,7 +513,7 @@ void Timer_Interrupt( void ){
         M5.Lcd.setCursor(15, 120);
         M5.Lcd.print("No.");
         M5.Lcd.setTextSize(5);
-        M5.Lcd.setCursor(28, 160);
+        M5.Lcd.setCursor(10, 160);
         M5.Lcd.printf("%2d", patternNo+1);
 
         M5.Lcd.setTextSize(2);
